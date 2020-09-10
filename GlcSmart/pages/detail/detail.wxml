@@ -1,0 +1,43 @@
+<!-- pages/detail/detail.wxml -->
+<view class="">
+    <view class="qrcode">
+        <view wx:if="{{orderFinish}}">
+            <button class="qrcode_but" bindtap="" style="color:light">
+                订单已完成
+            </button>
+        </view>
+        <view wx:elif="{{bindFinish}}">
+            <button class="qrcode_but" bindtap="setOrderStatus" style="color:green">
+                校验完成/订单发货
+            </button>
+        </view>
+        <view wx:else>
+            <button class="qrcode_but" bindtap="getQRCode">扫描商品条形码</button>
+        </view>
+    </view>
+    <view class="showContent">
+        <view class="express">
+            <view wx:for="{{express}}" wx:key="*this">{{item}}</view>
+        </view>
+        <view wx:for="{{group}}" wx:for-item="curItem" wx:for-index="curIndex" wx:key="*this" style="color:green">
+            <view class="express">
+                {{curItem.c_name+' * '+curItem.c_num}}
+                <view wx:for="{{curItem.g_list}}" wx:for-item="goodsItem" wx:for-index="gIndex" style="flex-direction: row;display:flex;" wx:key="*this">
+                    <view wx:if="{{bindData[goodsItem.g_id]>0}}">
+                        <view style='color:green'>
+                            {{'->'+goodsItem.g_name+' *'+bindData[goodsItem.g_id]}}
+                        </view>
+                    </view>
+                    <view wx:else>
+                        <view style=''>
+                            {{'->'+goodsItem.g_name}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <image src='../image/bg.jpg' class='home_bg' />
+    </view>
+</view>

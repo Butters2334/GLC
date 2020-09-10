@@ -1,0 +1,41 @@
+<!-- index.wxml -->
+<view class="container">
+    <view class="login_logo_bg" hover-class="none" hover-stop-propagation="false">
+        <image mode="scaleToFill" src="../image/logo.png" class='login_logo' />
+    </view>
+    <block wx:if="{{glc_token.length>0}}">
+        <button class='radius_btn' style='color:#c7ea46' bindtap="onScanEvent">扫描面单</button>
+        <button class='radius_btn' style='color:#c43927cc' bindtap="showCurList">课程列表</button>
+        <button class='radius_btn' style='color:#8a9a5b' bindtap="showGoodsList">剩余库存</button>
+    </block>
+    <block wx:if="{{!glc_token || glc_token.length<=0}}">
+        <view class="" hover-class="none" hover-stop-propagation="false" style="height:200px;padding-top:30px">
+            <view class="login_input_view">
+                <!-- <text class="login_input_tip">
+                    {{"账户:"}}
+                </text> -->
+                <image class="login_input_icon" mode="center" src="../image/email.png" />
+                <input type="text" disabled="false" value="scan_wx" class="login_input" maxlength="10" bindinput="bindUserInput" />
+            </view>
+            <view style="margin-top:20px" class="login_input_view">
+                <!-- <text class="login_input_tip">
+                    {{"密码:"}}
+                </text> -->
+                <image class="login_input_icon" mode="center" src="../image/password.png" />
+                <input type="text" password="true" placeholder="请输入密码" value="" class="login_input" maxlength="10" bindinput="bindPwdInput" />
+            </view>
+        <button class='radius_btn' style="margin-top:30px;" bindtap="bindLoginEvent">登录</button>
+        </view>
+    </block>
+    <view class='errorContent'>
+        <block wx:if="{{errorStr.length>0}}">
+            <text class='error_text'>{{errorStr}}</text>
+        </block>
+    </view>
+    <view class='welcome'>
+        <text class='welcome_text'>欢迎使用小橙分拣系统</text>
+    </view>
+    <view>
+        <image src='../image/bg.jpg' class='home_bg' />
+    </view>
+</view>
