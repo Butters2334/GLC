@@ -1,9 +1,9 @@
 //主要控制位置
 
 
-export const ADMIN_API = 'https://www.xinglinlmc.cn/v1';
+// export const ADMIN_API = 'https://www.xinglinlmc.cn/v1';
 //export const ADMIN_API = 'http://122.51.169.187:8001/v1';
-// export const ADMIN_API = 'http://127.0.0.1:8000/v1';
+export const ADMIN_API = 'http://127.0.0.1:8000/v1';
 // export const ADMIN_API = 'http://192.168.31.237:8000/v1';
 export const USER_API = ADMIN_API;
 export const WEBSITE_NAME = '小橙后台';
