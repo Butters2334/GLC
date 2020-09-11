@@ -12,12 +12,31 @@
 ##[python3+django](./GLCServer)
 >原本都部署到腾讯云了,但是目前也下线了,可以安装python3环境部署本地服务器,之后部署到云上面有什么问题可以提出issues,尽量帮忙;
 >因为是练手项目,所以没使用第三方框架,仅仅用了django的一点功能,代码也偏简单,不过实现功能足够了
+>基本项目结构
+>
+```py
+# 目录结构介绍
+├── GLCServer               #全局接口
+|   ├── urls.py             #路由入口,管理所有接口跳转           
+|   ├── views.py            #少量全局接口           
+|   ├── models.py           #DB定义           
+├── user                    #用户接口
+|   ├── views.py            #接口实现
+|   ├── models.py           #DB定义 
+├── curriculum              #课程接口,内部和user相同
+├── goods                   #商品接口,内部和user相同
+├── order                   #订单接口,内部和user相同
+├── static                  #静态文件夹
+├── nginx.conf              #部署到云上面用的配置文件
+├── ssl                     #https的证书,目前已失效
+|   ├── Nginx               #实现方案不同最终用到的证书不同
+```
 
-##([小程序](./GlcSmart)
+##[小程序](./GlcSmart)
 >后续尝试将react的项目放到小程序来,因为时间不足,就只是实现了扫货的功能
 >待后续传图...
 
-##[paw](./GLCIntface.paw)
+##[**paw**](./GLCIntface.paw)
 >可以使用paw测试接口,记得把域名改为ip地址
 
 
