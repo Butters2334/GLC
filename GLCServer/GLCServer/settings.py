@@ -125,9 +125,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # 数据库引擎
         'NAME': 'django_mysql', # 数据库名
         'USER': 'root', # 账号
-        # 'PASSWORD': '123456', # 本机mysql密码
-        # 'USER': 'root', # 生产账号
-        'PASSWORD': 'MAhuachen666', # 生产密码
+        'PASSWORD': '123456', # 本机mysql密码
         'HOST': '127.0.0.1', # HOST
         'POST': 3306, # 端口
     }
