@@ -7,7 +7,11 @@
 ##[React](./cms_community_e_commerce)
 >基于[walljser/cms_community_e_commerce](https://github.com/walljser/cms_community_e_commerce)改写了React前端,和原项目一样使用了[ANT](https://ant.design/docs/react/introduce-cn)框架
 >对原项目进行了比较大的改动,需要等后续来删除多余代码才方便二次使用;
->待后续传图...
+>##### 效果图
+* 沙盒主页 
+![沙盒主页](https://raw.githubusercontent.com/anmac/GLC/master/screenshot/dashboard.png)
+
+
 
 ##[python3+django](./GLCServer)
 >原本都部署到腾讯云了,但是目前也下线了,可以安装python3环境部署本地服务器,之后部署到云上面有什么问题可以提出issues,尽量帮忙;
